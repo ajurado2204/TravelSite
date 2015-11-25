@@ -1,10 +1,14 @@
 .jumbotron{
-  margin-top: -3%;
   padding-bottom: 0px;
+  padding-top: 0;
 }
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-    width: 80%;
     margin: auto;
-  }
+}
+
+.nav, .navbar {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
