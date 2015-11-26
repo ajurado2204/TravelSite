@@ -4,6 +4,13 @@
   background: rgb(255, 255, 255);
 }
 
+.item img {
+ height: auto;
+ width: auto;
+ min-height: 800px;
+ max-height: 800px;
+}
+
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
     margin: auto;
