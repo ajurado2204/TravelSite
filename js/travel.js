@@ -11,6 +11,8 @@ $(document).ready(function(){
     });
   });
 
+  //remove panel(s) from the modal based on preference
+
   $(".checkNjBtn").on("click",function(){
     $(".newYorkPanel").toggle(1000);
   });
