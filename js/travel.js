@@ -11,7 +11,15 @@ $(document).ready(function(){
     });
   });
 
+  $(".checkNjBtn").on("click",function(){
+    $(".newYorkPanel").toggle(1000);
+  });
 
+  $(".checkNyBtn").on("click",function(){
+    $(".newJerseyPanel").toggle(2000);
+  });
+
+  
 
 
 
