@@ -1,6 +1,7 @@
 .jumbotron{
   padding-bottom: 0px;
   padding-top: 0;
+  background: rgb(255, 255, 255);
 }
 
 .item img {
@@ -18,4 +19,8 @@
 .nav, .navbar {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+.col-md-9{
+	padding-left: 7%;
 }
