@@ -23,6 +23,11 @@ $(document).ready(function(){
 
   
 
+  $(".dropdown-menu li a").on("click",function(){
+    $(this).parents(".btn-group").find('.btn.btn-default.dropdown-toggle').text($(this).text()).append('  <span class="caret"></span>');
+    $(this).parents(".btn-group").find('.btn.btn-default.dropdown-toggle').val($(this).text());
+  });
+
 
 
 });
