@@ -53,6 +53,37 @@ $(document).ready(function(){
     $(".newJerseyPanel").toggle(2000);
   });
 
+  $("#searchBtn").on("click", function(){
+    var citySelect = $(".form-control").val();
+    $(".panel").hide();
+
+    switch (citySelect) {
+      case "New York City, NY":
+        $(".newYorkPanel").show();
+        break;
+
+      case "Hoboken, NJ":
+        $(".newJerseyPanel").show();
+        break;
+        
+      case "Chicago, IL":
+        $(".chicagoPanel").show();
+        break;
+        
+      case "Los Angeles, CA":
+        $(".laPanel").show();
+        break;
+        
+      case "San Fransisco, CA":
+        $(".sfPanel").show();
+        break;
+
+      case "Miami, FL":
+        $(".miamiPanel").show();
+        break;
+    };
+  });
+
   
 
   $(".dropdown-menu li a").on("click",function(){

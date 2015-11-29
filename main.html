@@ -96,18 +96,18 @@
           <fieldset>
             <div class="form-group">
               <div class="col-lg-12">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    City  <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">New York</a></li>
-                    <li><a href="#">New Jersey</a></li>
-                  </ul>
-                </div>
+                <select class="form-control">
+                  <option></option>
+                  <option>New York City, NY</option>
+                  <option>Hoboken, NJ</option>
+                  <option>Chicago, IL</option>
+                  <option>Los Angeles, CA</option>
+                  <option>San Fransisco, CA</option>
+                  <option>Miami, FL</option>
+                </select>
                 <input type="text" class="form-control datepicker checkin" id="checkin" placeholder="Check-in">
                 <input type="text" class="form-control datepicker checkout" id="checkout"  placeholder="Check-out">
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#searchModal">Search</a>
+                <a href="#" class="btn btn-primary" id="searchBtn" data-toggle="modal" data-target="#searchModal">Search</a>
               </div>
             </div>
           </fieldset>
@@ -117,13 +117,13 @@
     </div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal of hotels for cities -->
   <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          <h4 class="modal-title" id="myModalLabel">Hotels</h4>
         </div>
         
         <div class="modal-body">
@@ -144,58 +144,223 @@
             <div class="col-md-8">
               <div class="panel panel-default newYorkPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">New York City<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://tdr.aaa.com/tdr-images/images/property_photo/accommodation/123831H1.jpg">
+                  The Hilton
+                  <br />
+                  1335 Ave of the Americas
+                  <br />
+                  New York, NY 10019
+                </div>
+              </div>
+              <div class="panel panel-default newYorkPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">New York City<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://js2media.escdn.de/public/cache/hotel/plain-nowater/400x400/5014_ink48_hotel_0523820.jpg">
+                  The Towers
+                  <br />
+                  455 Madison Ave
+                  <br />
+                  New York, NY 10022
+                </div>
+              </div>
+              <div class="panel panel-default newYorkPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">New York City<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://www.buytravelbuy.com/Downloads/Paquetes_de_Viajes/Alojamientos_Unicos/Ritz_Carlton_New_York_Central_Park_Hotel/Ritz-Carlton-New-York-Central-Park-Hotel-2.jpg">
+                  The Ritz-Carlton
+                  <br />
+                  50 Central Park S
+                  <br />
+                  New York, NY 10019
                 </div>
               </div>
               <div class="panel panel-default newJerseyPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New Jersey <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Hoboken <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://tdr.aaa.com/tdr-images/images/property_photo/accommodation/178653H1.jpg">
+                  W Hoboken
+                  <br />
+                  225 River Street
+                  <br />
+                  Hoboken, NJ 07030
                 </div>
               </div>
-              <div class="panel panel-default newYorkPanel">
+              <div class="panel panel-default newJerseyPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Hoboken <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://gaycities-listing-images-production.s3.amazonaws.com/medsq_bars-306542-Sheraton-Lincoln-Harbor-Hotel-0494f.jpg">
+                  Sheraton Lincoln Harbor Hotel
+                  <br />
+                  500 Harbor Boulevard
+                  <br />
+                  Hoboken, NJ 07086
                 </div>
               </div>
-              <div class="panel panel-default newYorkPanel">
+              <div class="panel panel-default newJerseyPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Hoboken <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://www.photocase.com/stock-photos/198225-stock-photo-sky-city-high-rise-skyline-prefab-construction-building.jpg">
+                  Sky City Apartments
+                  <br />
+                  1414 Grand Street
+                  <br />
+                  Hoboken, NJ 07030
                 </div>
               </div>
-              <div class="panel panel-default newYorkPanel">
+              <div class="panel panel-default chicagoPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Chicago <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="https://c1.staticflickr.com/9/8719/16694536687_69fd994083.jpg">
+                  Sofitel Chicago Water Tower
+                  <br />
+                  20 E Chestnut St
+                  <br />
+                  Chicago, IL 60611
                 </div>
               </div>
-              <div class="panel panel-default newYorkPanel">
+              <div class="panel panel-default chicagoPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Chicago <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://www.chicagostyleweddings.com/images/vendors/3381detail.jpg">
+                  Loews Chicago O'Hare Hotel
+                  <br />
+                  5300 N River Rd
+                  <br />
+                  Rosemont, IL 60018
                 </div>
               </div>
-              <div class="panel panel-default newYorkPanel">
+              <div class="panel panel-default chicagoPanel">
                 <div class="panel-heading">
-                  <h3 class="panel-title">New York<a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                  <h3 class="panel-title">Chicago <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
                 </div>
                 <div class="panel-body">
-                  The Hilton <img class="pull-right" src="http://placehold.it/100x100">
+                  <img class="pull-right thumbnail" src="http://i1.bookcdn.com/data/Photos/OriginalPhoto/1045/104534/104534177/The-Ritz-Carlton-Chicago-(A-Four-Seasons-Hotel)-photos-Exterior.JPEG">
+                  The Ritz-Carlton
+                  <br />
+                  160 E Pearson
+                  <br />
+                  Chicago, IL 60611
+                </div>
+              </div>
+              <div class="panel panel-default laPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Los Angeles <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://i1.bookcdn.com/data/Photos/OriginalPhoto/530/53011/53011357/Ritz-Carlton-Los-Angeles-photos-Exterior.JPEG">
+                  The Ritz-Carlton
+                  <br />
+                  900 W Olympic Blvd
+                  <br />
+                  Los Angeles, CA 90015
+                </div>
+              </div>
+              <div class="panel panel-default laPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Los Angeles <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="https://www.globhotels.com/images/S7Q/S7Q_1.jpg">
+                  Sofitel Los Angeles at Beverly Hills
+                  <br />
+                  8555 Beverly Blvd
+                  <br />
+                  Los Angeles, CA 90048
+                </div>
+              </div>
+              <div class="panel panel-default sfPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">San Fransisco <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://tdr.aaa.com/tdr-images/images/property_photo/accommodation/63361H1.jpg">
+                  The Ritz-Carlton
+                  <br />
+                  600 Stockton St
+                  <br />
+                  San Fransisco, CA 94108
+                </div>
+              </div>
+              <div class="panel panel-default sfPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">San Fransisco <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://img1.sunset.timeinc.net/sites/default/files/image/city-guides/san-francisco/sf-hotels-palace-hotel-0710-x.jpg">
+                  Fairmont
+                  <br />
+                  950 Mason St
+                  <br />
+                  San Fransisco, CA 94108
+                </div>
+              </div>
+              <div class="panel panel-default sfPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">San Fransisco <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="https://i.szalas.hu/hotels/607837/500x500/9049547.jpg">
+                  The St. Regis
+                  <br />
+                  125 3rd St
+                  <br />
+                  San Fransisco, CA 94103
+                </div>
+              </div>
+              <div class="panel panel-default miamiPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Miami <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://tdr.aaa.com/tdr-images/images/property_photo/accommodation/124138H1.jpg">
+                  Ritz-Carlton
+                  <br />
+                  3300 SW 27th Ave
+                  <br />
+                  Miami, FL 33133
+                </div>
+              </div>
+              <div class="panel panel-default miamiPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Miami <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://i.szalas.hu/hotels/628599/500x500/7549161.jpg">
+                  JW Marriott Marquis
+                  <br />
+                  255 Biscayne Blvd Way
+                  <br />
+                  Miami, FL 33131
+                </div>
+              </div>
+              <div class="panel panel-default miamiPanel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Miami <a href="#" class="close-modal"><span class="glyphicon glyphicon-remove-sign pull-right" aria-hidden="true"></span></a></h3>
+                </div>
+                <div class="panel-body">
+                  <img class="pull-right thumbnail" src="http://tdr.aaa.com/tdr-images/images/property_photo/accommodation/121792H1.jpg">
+                  Mandarin Oriental
+                  <br />
+                  500 Brickell Key Dr
+                  <br />
+                  Miami, FL 33131
                 </div>
               </div>
             </div>
