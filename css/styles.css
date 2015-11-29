@@ -24,3 +24,10 @@
 .col-md-9{
 	padding-left: 7%;
 }
+
+footer {
+ font-size: .7em;
+ text-align: center;
+ list-style-type: none;
+ margin-bottom: 5px;
+}
