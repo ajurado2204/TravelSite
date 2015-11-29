@@ -31,3 +31,10 @@
   padding: 0;
   margin: 0;
 }
+
+footer {
+ font-size: .7em;
+ text-align: center;
+ list-style-type: none;
+ margin-bottom: 5px;
+}
