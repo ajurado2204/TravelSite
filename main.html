@@ -96,7 +96,7 @@
           <fieldset>
             <div class="form-group">
               <div class="col-lg-12">
-                <select class="form-control">
+                <select class="form-control city-select">
                   <option></option>
                   <option>New York City, NY</option>
                   <option>Hoboken, NJ</option>
@@ -107,7 +107,7 @@
                 </select>
                 <input type="text" class="form-control datepicker checkin" id="checkin" placeholder="Check-in">
                 <input type="text" class="form-control datepicker checkout" id="checkout"  placeholder="Check-out">
-                <a href="#" class="btn btn-primary" id="searchBtn" data-toggle="modal" data-target="#searchModal">Search</a>
+                <a href="#" class="btn btn-primary" id="searchBtn">Search</a>
               </div>
             </div>
           </fieldset>
@@ -118,7 +118,7 @@
   </div>
 
   <!-- Modal of hotels for cities -->
-  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">

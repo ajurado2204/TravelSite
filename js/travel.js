@@ -31,7 +31,15 @@ $(document).ready(function(){
         }
       });
     },
+  });
 
+  $("#searchBtn").on("click", function(){
+    var citySelect = $(".city-select").val();
+    var checkIn = $(".checkin").val();
+    var checkOut = $(".checkout").val();
+    if (citySelect && checkIn && checkOut) {
+      $("#searchModal").modal();
+    };
   });
 
   // delete a panel from the modal
