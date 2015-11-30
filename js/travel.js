@@ -91,6 +91,9 @@ $(document).ready(function(){
     $(this).parents(".btn-group").find('.btn.btn-default.dropdown-toggle').val($(this).text());
   });
 
+  $(".panel").on("click", ".btn-info", function() {
+    $(this).parent().next(".panel-footer").collapse("toggle");
+});
 
 
 });
